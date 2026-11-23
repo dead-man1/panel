@@ -44,6 +44,10 @@ services:
     volumes:
       - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - ./monitoring/prometheus/token:/etc/prometheus/token:ro
+      # NX Insight's metrics token, for the nx-insight job in prometheus.yml.
+      # Uncomment together with that job: a file mounted before it exists
+      # comes up as an empty directory.
+      # - ./monitoring/prometheus/insight_token:/etc/prometheus/insight_token:ro
       - promdata:/prometheus
 
   grafana:

@@ -40,3 +40,22 @@ scrape_configs:
     # with it. Uncomment and set it:
     #
     # metrics_path: /your-base-path/metrics
+
+  # NX Insight, if you run it (the nx-insight dashboard reads it). Insight
+  # serves /metrics under its admin path, behind the token you gave its
+  # "Token for Prometheus" question at install; write that token into
+  # monitoring/prometheus/insight_token, uncomment the matching line in
+  # docker-compose.monitoring.yml, and uncomment this job. The target is
+  # Insight's address as Prometheus reaches it — on the panel's server, its
+  # container name, or the host and port you installed it on. With Insight's
+  # own HTTPS on (any mode but `off`), set the scheme to https; a
+  # self-signed certificate also needs insecure_skip_verify.
+  #
+  # - job_name: nx-insight
+  #   metrics_path: /your-insight-admin-path/metrics
+  #   authorization:
+  #     type: Bearer
+  #     credentials_file: /etc/prometheus/insight_token
+  #   scheme: https
+  #   static_configs:
+  #     - targets: ['insight:8099']

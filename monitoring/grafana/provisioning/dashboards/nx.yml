@@ -1,5 +1,7 @@
-# Load every dashboard JSON in the mounted directory. `foldersFromFilesStructure`
-# is off: there is one dashboard and no folder tree to mirror.
+# Load every dashboard JSON in the mounted directory — nx-fleet.json (the
+# panel) and nx-insight.json (NX Insight's paths, empty without its job in
+# prometheus.yml). `foldersFromFilesStructure` is off: there is no folder tree
+# to mirror.
 apiVersion: 1
 
 providers:

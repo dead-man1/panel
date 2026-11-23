@@ -11,5 +11,6 @@ docker/*/.env
 # The Prometheus scrape credential: an API token for this install's /metrics.
 # The scrape config beside it is meant to be shareable; this is not.
 monitoring/prometheus/token
+monitoring/prometheus/insight_token
 # Monitoring state if the overlay is run from inside a clone.
 monitoring/data/
